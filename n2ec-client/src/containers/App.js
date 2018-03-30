@@ -1,12 +1,14 @@
 import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TopBar from '../components/TopBar'
+import Main from '../components/Main'
 import './App.css'
 
 const App = () => (
     <MuiThemeProvider>
         <div className="App">
             <TopBar />
+            <Main />
         </div>
     </MuiThemeProvider>
 )
