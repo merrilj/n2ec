@@ -1,41 +1,62 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from 'material-ui/styles'
+import React, { Component } from 'react'
 import AppBar from 'material-ui/AppBar'
-import Toolbar from 'material-ui/Toolbar'
-import Typography from 'material-ui/Typography'
-import Button from 'material-ui/Button'
 
-const TopBar = () => (
-    <div className={styles.root}>
-    <AppBar position="static" style={styles.topBar}>
-        <Toolbar>
-            <Typography variant="title" style={styles.title} >
-                N2 Electrical Contractors, LLC
-            </Typography>
-            <div><Button style={styles.menuButtons}>Home</Button>
-            <Button style={styles.menuButtons}>Contact</Button></div>
-        </Toolbar>
-    </AppBar>
-    </div>
-)
+export default class TopBar extends Component {
 
-export default TopBar
+    render() {
+
+        const navButtons = (
+            <div style={styles.navButtonsDiv}>
+                <h4 style={styles.navButtons}>
+                    <a href=''>Home</a>
+                </h4>
+                <h4 style={styles.navButtons}>
+                    <a href=''>Contact</a>
+                </h4>
+            </div>
+        )
+
+        return (
+            <AppBar
+                style={styles.topBar}
+                showMenuIconButton={false}
+                titleStyle={styles.title}
+                title="N2 Electrical Contractors, LLC"
+                children={navButtons}
+            />
+        )
+    }
+}
 
 const styles = {
     topBar: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        fontFamily: 'Monda, sans-serif',
+        overflow: 'hidden',
+        position: 'fixed',
+        top: 0,
+        width: '100%'
     },
     title: {
-        color: '#000',
-        fontFamily: 'Monda, sans-serif'
+        color: '#000'
     },
-    menuButtons: {
-        flex: 1,
-        color: '#000',
-        backgroundColor: 'transparent'
+    navButtonsDiv: {
+        display: 'flex',
+        alignItems: 'center'
     },
-    root: {
-        flexGrow: 1,
+    navButtons: {
+        float: 'left',
+        marginTop: 0,
+        marginBottom: 0,
+        marginLeft: '1em'
     }
 }
+
+
+// .navbar {
+//     overflow: hidden;
+//     background-color: #333;
+//     position: fixed; /* Set the navbar to fixed position */
+//     top: 0; /* Position the navbar at the top of the page */
+//     width: 100%; /* Full width */
+// }
