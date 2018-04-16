@@ -1,9 +1,22 @@
 .App {
     font-family: 'Monda', sans-serif;
+    min-height: 100vh;
 }
 
 body {
     background-color: #F9F9F9;
+}
+
+.fa-linkedin-in:hover {
+    color: #000 !important;
+}
+
+.fa-github:hover {
+    color: #000 !important;
+}
+
+.fa-envelope:hover {
+    color: #000 !important;
 }
 
 h4 > a {
@@ -37,3 +50,13 @@ h4 > a:hover:before {
     transform: scaleX(1);
 }
 
+.logo {
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    height: 50%;
+    width: 50%;
+}

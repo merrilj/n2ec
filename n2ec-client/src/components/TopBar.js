@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AppBar from 'material-ui/AppBar'
+import { Link } from 'react-router-dom'
 
 export default class TopBar extends Component {
 
@@ -8,10 +9,13 @@ export default class TopBar extends Component {
         const navButtons = (
             <div style={styles.navButtonsDiv}>
                 <h4 style={styles.navButtons}>
-                    <a href=''>Home</a>
+                    <Link to='/'>Home</Link>
                 </h4>
                 <h4 style={styles.navButtons}>
-                    <a href=''>Contact</a>
+                    <Link to='/projects'>Projects</Link>
+                </h4>
+                <h4 style={styles.navButtons}>
+                    <Link to='/contact'>Contact</Link>                    
                 </h4>
             </div>
         )
@@ -21,7 +25,7 @@ export default class TopBar extends Component {
                 style={styles.topBar}
                 showMenuIconButton={false}
                 titleStyle={styles.title}
-                title="N2 Electrical Contractors, LLC"
+                title="N2 Electrical Contractors"
                 children={navButtons}
             />
         )
@@ -48,15 +52,7 @@ const styles = {
         float: 'left',
         marginTop: 0,
         marginBottom: 0,
-        marginLeft: '1em'
+        marginLeft: '1em',
+        fontWeight: 'lighter'
     }
 }
-
-
-// .navbar {
-//     overflow: hidden;
-//     background-color: #333;
-//     position: fixed; /* Set the navbar to fixed position */
-//     top: 0; /* Position the navbar at the top of the page */
-//     width: 100%; /* Full width */
-// }
