@@ -20,7 +20,7 @@ const Home = () => (
         <div style={styles.logoDiv}>
             <img src={require('../images/n2ec-logo.png')} className='logo' alt='N2 logo' />
         </div>
-        <Paper style={styles.paper} zDepth={3}>
+        <Paper style={styles.paper} zDepth={2}>
             <h2 style={{marginBottom: 0}}><b>Trusted Commercial Expert Electricians</b></h2>
             <Divider style={{width: '50%'}} />
             <p style={styles.licensePara}><i>TECL 31364</i></p>
@@ -34,7 +34,7 @@ const styles = {
     main: {
         marginRight: '1em',
         marginLeft: '1em',
-        marginTop: '64px'
+        // marginTop: '64px'
     },
     logoDiv: {
         display: 'flex',
