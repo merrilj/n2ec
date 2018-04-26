@@ -21,13 +21,15 @@ export default class TopBar extends Component {
         )
 
         return (
-            <AppBar
-                style={styles.topBar}
-                showMenuIconButton={false}
-                titleStyle={styles.title}
-                title="N2 Electrical Contractors"
-                children={navButtons}
-            />
+            <div id='topBar'>
+                <AppBar
+                    style={styles.topBar}
+                    showMenuIconButton={false}
+                    titleStyle={styles.title}
+                    title="N2 Electrical Contractors"
+                    children={navButtons}
+                />
+            </div>
         )
     }
 }
