@@ -1,4 +1,6 @@
 html, body {
+    margin: 0;
+    padding: 0;
     height: 100vh;
     min-height: 100vh;
     background-color: #F9F9F9;
@@ -6,31 +8,34 @@ html, body {
 }
 
 #container {
-
+    min-height: 100vh;
+    position: relative;
 }
 
 #topBar {
-    margin-top: 64px;
+    height: 64px;
 }
 
 #main {
-
+    min-height: calc(100vh - 264px);
+    padding: 1em;
+    display: grid;
 }
 
 #footer {
-
+    box-sizing: border-box;
+    height: 200px;
+    background-color: #eee;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 45px;
 }
 
-.fa-linkedin-in:hover {
+.footer.fa-linkedin-in:hover {
     color: #000 !important;
 }
 
-.fa-github:hover {
-    color: #000 !important;
-}
-
-.fa-envelope:hover {
-    color: #000 !important;
+.footer.fa-envelope:hover {
+    color: #000 !important;    
 }
 
 h4 > a {
@@ -71,6 +76,11 @@ h4 > a:hover:before {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    height: 50%;
-    width: 50%;
+    max-height: 476.5px;
+    max-width: 616px;
+    /* background: no-repeat center center fixed; */
+/* 2550 */
+/* 3300 */
 }
+
+a { color: inherit; } 

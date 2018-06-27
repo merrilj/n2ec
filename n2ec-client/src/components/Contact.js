@@ -1,47 +1,73 @@
 import React from 'react'
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card'
-import FlatButton from 'material-ui/FlatButton'
+import Avatar from '@material-ui/core/Avatar'
+import Divider from '@material-ui/core/Divider'
+
+import './Contact.css'
+
+const contacts = [
+    {name: 'Nathan Jeffs', email: 'nathan@n2ec.com'},
+    {name: 'Nick Holloway', email: 'nick@n2ec.com'}    
+]
 
 const Contact = () => (
-    <div style={{margin: '0 auto', minHeight: '100vh'}}>
-        <MainCard />
+    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <h2>Get in Touch</h2>
+        <div style={{display: 'flex', flexWrap: 'wrap', maxWidth: '50rem', justifyContent: 'space-between'}}>
+        {contacts.map((el, i) => (
+            <div key={i}>
+                <ContactCard contact={el} style={styles.smallCard} />
+            </div>
+        ))}
+        <div className='contact-card' style={{width: '100%', margin: '0 1rem'}}>
+                <div style={styles.avatarDiv}>
+                    <a href='tel:18052756232'>
+                        <Avatar className='contact-avatar'>
+                            <i style={{fontSize: '1.5rem'}} className="fas fa-phone"></i>
+                        </Avatar>
+                    </a>
+                    <p className='contact-para'>Call us toll free at 805-ASK-N2EC </p>
+                </div>
+                <Divider style={{width: '75%', margin: '1rem auto'}}/>
+                <div style={styles.avatarDiv}>
+                    <a href='mailto:18052756232'>
+                        <Avatar className='contact-avatar'>
+                            <i style={{fontSize: '1.5rem'}} className="far fa-envelope"></i>
+                        </Avatar>
+                    </a>
+                    <p className='contact-para' style={{width: 263}}>
+                        If you're interested in working with us feel free to attach a resume and send us a message
+                    </p>
+                </div>
+        </div>
+        </div>
     </div>
 )
 
 export default Contact
 
-// on contact page if you're interested in working with us send us a message and submit a resume
-
-// toll free number 885-ask-n2ec
-
-
-// One contact Nick's name and email
-
-// Another contact box Nate's name and email
-
-
-const MainCard = () => (
-    <Card style={{marginTop: '4em'}}>
-        <CardHeader
-            title="URL Avatar"
-            subtitle="Subtitle"
-            avatar="images/jsa-128.jpg"
-        />
-        {/* <CardMedia
-            overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-        >
-            <img src="images/nature-600-337.jpg" alt="" />
-        </CardMedia> */}
-        <CardTitle title="Card title" subtitle="Card subtitle" />
-        <CardText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-            Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-            Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-        </CardText>
-        <CardActions>
-            <FlatButton label="Action1" />
-            <FlatButton label="Action2" />
-        </CardActions>
-    </Card>
+const ContactCard = ({ contact }) => (
+    <div className='contact-card' style={styles.smallCard}>
+        <h2 style={{margin: 0}}>{contact.name}</h2>
+        <h4 style={{margin: 0}}>{contact.email}</h4>
+    </div>
 )
+
+const styles = {
+    smallCard: {
+        margin: '1rem',
+        width: '20rem',
+        height: '10rem'
+    },
+    avatar: {
+        height: '60px',
+        width: '60px',
+        color: '#000',
+        backgroundColor: '#fff',
+        borderStyle: 'solid'
+    },
+    avatarDiv: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+    }
+}
