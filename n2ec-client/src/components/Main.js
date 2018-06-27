@@ -6,7 +6,7 @@ import Contact from './Contact'
 import Projects from './Projects'
 
 const Main = () => (
-    <div style={styles.main}>
+    <div>
         <Switch>
             <Route exact path='/' component={Home}/>
             <Route path='/projects' component={Projects}/>
@@ -16,8 +16,8 @@ const Main = () => (
 )
 
 const Home = () => (
-    <div>
-        <div style={styles.logoDiv}>
+    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <div>
             <img src={require('../images/n2ec-logo.png')} className='logo' alt='N2 logo' />
         </div>
         <Paper style={styles.paper} zDepth={2}>
@@ -31,11 +31,11 @@ const Home = () => (
 export default Main
 
 const styles = {
-    main: {
-        marginRight: '1em',
-        marginLeft: '1em',
-        // marginTop: '64px'
-    },
+    // main: {
+    //     marginRight: '1em',
+    //     marginLeft: '1em',
+    //     // marginTop: '64px'
+    // },
     logoDiv: {
         display: 'flex',
         justifyContent: 'center'
@@ -54,7 +54,8 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'center',
         fontFamily: 'Monda, sans-serif',
-        color: '#767676'
+        color: '#767676',
+        padding: '1rem'
     },
     licensePara: {
         marginTop: 0,

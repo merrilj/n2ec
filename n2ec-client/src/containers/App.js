@@ -7,12 +7,24 @@ import './App.css'
 
 const App = () => (
     <MuiThemeProvider>
-        <div className="App">
-            <TopBar />
-            <Main />
-            <Footer />
+        <div id='container'>
+            <div id='topBar'>
+                <TopBar />
+            </div>
+
+            <div id='main'>
+                <Main />
+            </div>
+
+            <div id='footer'>
+                <Footer />
+            </div>
         </div>
     </MuiThemeProvider>
 )
 
 export default App
+
+// make Nate's stuff black and white 
+// trusted black tecl red
+// divider between call and email

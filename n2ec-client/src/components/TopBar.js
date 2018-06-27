@@ -21,7 +21,7 @@ export default class TopBar extends Component {
         )
 
         return (
-            <div id='topBar'>
+            <div>
                 <AppBar
                     style={styles.topBar}
                     showMenuIconButton={false}
