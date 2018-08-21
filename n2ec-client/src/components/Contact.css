@@ -1,3 +1,17 @@
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50rem;
+    justify-content: center;
+}
+
 .contact-avatar {
     border-style: solid;
     color: #000 !important;
@@ -12,6 +26,7 @@
 .contact-para {
     font-size: 1rem;
     margin: 0;
+    width: 295px;
     text-align: center;
 }
 
@@ -23,3 +38,19 @@
     background-color: #fff;
     padding: 1rem;
 }
+
+.contact-card a {
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+    text-decoration-color: #EA1E25;
+}
+
+/* @media screen and (max-width: 805px) {
+    .contact-cards {
+        display: flex;
+        justify-content: center;
+    }
+} */

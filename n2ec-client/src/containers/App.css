@@ -18,7 +18,7 @@ html, body {
 
 #main {
     min-height: calc(100vh - 264px);
-    padding: 1em;
+    padding: 0 1em;
     display: grid;
 }
 
@@ -78,6 +78,7 @@ h4 > a:hover:before {
     -ms-user-select: none;
     max-height: 476.5px;
     max-width: 616px;
+    margin-top: -50px;
     /* background: no-repeat center center fixed; */
 /* 2550 */
 /* 3300 */

@@ -1,6 +1,5 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
-import Divider from 'material-ui/Divider'
+import Divider from '@material-ui/core/Divider'
 import { Switch, Route } from 'react-router-dom'
 import Contact from './Contact'
 import Projects from './Projects'
@@ -16,26 +15,39 @@ const Main = () => (
 )
 
 const Home = () => (
-    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+    <div style={styles.mainDiv}>
         <div>
             <img src={require('../images/n2ec-logo.png')} className='logo' alt='N2 logo' />
         </div>
-        <Paper style={styles.paper} zDepth={2}>
-            <h2 style={{marginBottom: 0}}><b>Trusted Commercial Expert Electricians</b></h2>
+
+        <div style={styles.taglineDiv}>
+            <p style={styles.licensePara}>
+                <i>TECL 31364</i>
+            </p>
             <Divider style={{width: '50%'}} />
-            <p style={styles.licensePara}><i>TECL 31364</i></p>
-        </Paper>
+            <h3 style={{margin: 0}}>
+                <b>Trusted Commercial Expert Electricians</b>
+            </h3>
+        </div>
     </div>
 )
 
 export default Main
 
 const styles = {
-    // main: {
-    //     marginRight: '1em',
-    //     marginLeft: '1em',
-    //     // marginTop: '64px'
-    // },
+    mainDiv: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    taglineDiv: {
+        marginTop: -140,
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
     logoDiv: {
         display: 'flex',
         justifyContent: 'center'
@@ -44,21 +56,9 @@ const styles = {
         maxHeight: '80%',
         maxWidth: '80%',
     },
-    paper: {
-        height: '10rem',
-        maxWidth: '40rem',
-        margin: '0 auto',
-        marginBottom: '5em',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontFamily: 'Monda, sans-serif',
-        color: '#767676',
-        padding: '1rem'
-    },
     licensePara: {
-        marginTop: 0,
-        fontSize: '1.5em'
+        margin: 0,
+        fontSize: '1.3em',
+        color: '#EA1E25'
     }
 }
