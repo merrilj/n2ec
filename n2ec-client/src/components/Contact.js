@@ -3,6 +3,7 @@ import Avatar from '@material-ui/core/Avatar'
 import Divider from '@material-ui/core/Divider'
 
 import './Contact.css'
+import N2Logo from './N2Logo'
 
 const contacts = [
     {name: 'Nathan Jeffs', email: 'nathan@n2ec.com'},
@@ -11,15 +12,15 @@ const contacts = [
 
 const Contact = () => (
     <div className='contact-main'>
-        <h2>Get in Touch</h2>
+        <p style={{fontSize: '1.3rem', margin: '0.8rem', fontWeight: 'lighter'}}>Get in Touch</p>
         <div className='contact-cards'>
             {contacts.map((el, i) => (
                 <div key={i}>
                     <ContactCard contact={el} style={styles.smallCard} />
                 </div>
             ))}
-
-            <div style={{width: '100%', margin: '1rem 1rem'}}>
+        </div>
+            <div style={{maxWidth: '30rem', margin: '1rem 1rem'}}>
                 <div style={styles.avatarDiv}>
                     <a href='tel:18063914464'>
                         <Avatar className='contact-avatar'>
@@ -28,7 +29,7 @@ const Contact = () => (
                     </a>
                     <p className='contact-para'>Call us at (806) 391-4464</p>
                 </div>
-                <Divider style={{width: '75%', margin: '1rem auto'}}/>
+                <Divider style={{margin: '1rem auto'}}/>
                 <div style={styles.avatarDiv}>
                     <a href='mailto:18052756232'>
                         <Avatar className='contact-avatar'>
@@ -40,7 +41,6 @@ const Contact = () => (
                     </p>
                 </div>
             </div>
-        </div>
     </div>
 )
 
@@ -48,18 +48,22 @@ export default Contact
 
 const ContactCard = ({ contact }) => (
     <div className='contact-card' style={styles.smallCard}>
-        <h2 style={{margin: 0}}>{contact.name}</h2>
+        <N2Logo styles={styles.logo} />
+        <div style={{borderLeft:'1px solid #EA1E25', height:'90%'}}></div>
+        <div style={{textAlign: 'center', width: 150}}>
+        <h3 style={{margin: 0}}>{contact.name}</h3>
         <a href={`mailto:${contact.email}`}>
             <h4 style={{margin: 0}}>{contact.email}</h4>
         </a>
+        </div>
     </div>
 )
 
 const styles = {
-    smallCard: {
-        margin: '1rem',
-        width: '15rem',
-        height: '7rem'
+    logo: {
+        maxHeight: 95.3,
+        maxWidth: 123.2,
+        margin: '0px -20px'
     },
     avatar: {
         height: '60px',

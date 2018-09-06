@@ -1,60 +1,29 @@
-import React, { Component } from 'react'
-import AppBar from 'material-ui/AppBar'
+import React from 'react'
+import MediaQuery from 'react-responsive'
 import { Link } from 'react-router-dom'
 
-export default class TopBar extends Component {
+import './TopBar.css'
 
-    render() {
+const TopBar = () => (
+    <div className='main'>
+        <h2 style={{margin: 0}}>
+            <MediaQuery query="(min-width: 600px)">
+                N2 Electrical Contractors
+            </MediaQuery>
+            <MediaQuery query="(max-width: 599px)">N2EC</MediaQuery>
+        </h2>
+        <div className='nav-buttons-div'>
+            <h4 className='nav-buttons'>
+                <Link to='/'>Home</Link>
+            </h4>
+            <h4 className='nav-buttons'>
+                <Link to='/projects'>Projects</Link>
+            </h4>
+            <h4 className='nav-buttons'>
+                <Link to='/contact'>Contact</Link>                    
+            </h4>
+        </div>
+    </div>
+)
 
-        const navButtons = (
-            <div style={styles.navButtonsDiv}>
-                <h4 style={styles.navButtons}>
-                    <Link to='/'>Home</Link>
-                </h4>
-                <h4 style={styles.navButtons}>
-                    <Link to='/projects'>Projects</Link>
-                </h4>
-                <h4 style={styles.navButtons}>
-                    <Link to='/contact'>Contact</Link>                    
-                </h4>
-            </div>
-        )
-
-        return (
-            <div>
-                <AppBar
-                    style={styles.topBar}
-                    showMenuIconButton={false}
-                    titleStyle={styles.title}
-                    title="N2 Electrical Contractors"
-                    children={navButtons}
-                />
-            </div>
-        )
-    }
-}
-
-const styles = {
-    topBar: {
-        backgroundColor: '#fff',
-        fontFamily: 'Monda, sans-serif',
-        overflow: 'hidden',
-        position: 'fixed',
-        top: 0,
-        width: '100%'
-    },
-    title: {
-        color: '#000'
-    },
-    navButtonsDiv: {
-        display: 'flex',
-        alignItems: 'center'
-    },
-    navButtons: {
-        float: 'left',
-        marginTop: 0,
-        marginBottom: 0,
-        marginLeft: '1em',
-        fontWeight: 'lighter'
-    }
-}
+export default TopBar

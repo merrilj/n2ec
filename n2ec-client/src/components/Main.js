@@ -1,6 +1,9 @@
 import React from 'react'
 import Divider from '@material-ui/core/Divider'
 import { Switch, Route } from 'react-router-dom'
+// import MediaQuery from 'react-responsive'
+
+import N2Logo from './N2Logo'
 import Contact from './Contact'
 import Projects from './Projects'
 
@@ -16,9 +19,8 @@ const Main = () => (
 
 const Home = () => (
     <div style={styles.mainDiv}>
-        <div>
-            <img src={require('../images/n2ec-logo.png')} className='logo' alt='N2 logo' />
-        </div>
+        
+        <N2Logo styles={styles.logo} />
 
         <div style={styles.taglineDiv}>
             <p style={styles.licensePara}>
@@ -42,7 +44,7 @@ const styles = {
         alignItems: 'center'
     },
     taglineDiv: {
-        marginTop: -140,
+        marginTop: -130,
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -53,8 +55,9 @@ const styles = {
         justifyContent: 'center'
     },
     logo: {
-        maxHeight: '80%',
-        maxWidth: '80%',
+        maxHeight: 476.5,
+        maxWidth: 616,
+        marginTop: -50
     },
     licensePara: {
         margin: 0,

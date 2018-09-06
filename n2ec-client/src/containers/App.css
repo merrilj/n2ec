@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     height: 100vh;
     min-height: 100vh;
-    background-color: #F9F9F9;
+    background-color: #fff;
     font-family: 'Monda', sans-serif;    
 }
 
@@ -13,21 +13,32 @@ html, body {
 }
 
 #topBar {
-    height: 64px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.scrolling {
+    box-shadow: 2px 2px 2px #f0f0f0;
 }
 
 #main {
-    min-height: calc(100vh - 264px);
+    min-height: calc(100vh - 190px);
     padding: 0 1em;
     display: grid;
 }
 
 #footer {
     box-sizing: border-box;
-    height: 200px;
-    background-color: #eee;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 45px;
+    height: 130px;
+    background-color: #F9F9F9;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
 }
 
 .footer.fa-linkedin-in:hover {
@@ -37,51 +48,3 @@ html, body {
 .footer.fa-envelope:hover {
     color: #000 !important;    
 }
-
-h4 > a {
-    position: relative;
-    color: #000;
-    text-decoration: none;
-}
-  
-h4 > a:hover {
-    color: #000;
-}
-
-h4 > a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #EA1E25;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-h4 > a:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-.logo {
-    user-drag: none; 
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    max-height: 476.5px;
-    max-width: 616px;
-    margin-top: -50px;
-    /* background: no-repeat center center fixed; */
-/* 2550 */
-/* 3300 */
-}
-
-a { color: inherit; } 

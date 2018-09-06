@@ -9,6 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 50rem;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -26,7 +27,6 @@
 .contact-para {
     font-size: 1rem;
     margin: 0;
-    width: 295px;
     text-align: center;
 }
 
@@ -37,6 +37,13 @@
     border-color: #EA1E25;
     background-color: #fff;
     padding: 1rem;
+    margin: 1rem;
+    width: 17rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contact-card a {
