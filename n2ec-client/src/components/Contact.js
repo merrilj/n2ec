@@ -22,7 +22,7 @@ const Contact = () => (
         </div>
             <div style={{maxWidth: '30rem', margin: '1rem 1rem'}}>
                 <div style={styles.avatarDiv}>
-                    <a href='tel:18063914464'>
+                    <a href='tel:18065037323'>
                         <Avatar className='contact-avatar'>
                             <i style={{fontSize: '1.5rem'}} className='fas fa-phone'></i>
                         </Avatar>
