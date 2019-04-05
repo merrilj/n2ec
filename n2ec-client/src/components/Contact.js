@@ -24,16 +24,16 @@ const Contact = () => (
                 <div style={styles.avatarDiv}>
                     <a href='tel:18063914464'>
                         <Avatar className='contact-avatar'>
-                            <i style={{fontSize: '1.5rem'}} className="fas fa-phone"></i>
+                            <i style={{fontSize: '1.5rem'}} className='fas fa-phone'></i>
                         </Avatar>
                     </a>
-                    <p className='contact-para'>Call us at (806) 391-4464</p>
+                    <p className='contact-para'>Call us at (806) 503-7323</p>
                 </div>
                 <Divider style={{margin: '1rem auto'}}/>
                 <div style={styles.avatarDiv}>
-                    <a href='mailto:18052756232'>
+                    <a href='mailto:nathan@n2ec.com'>
                         <Avatar className='contact-avatar'>
-                            <i style={{fontSize: '1.5rem'}} className="far fa-envelope"></i>
+                            <i style={{fontSize: '1.5rem'}} className='far fa-envelope'></i>
                         </Avatar>
                     </a>
                     <p className='contact-para'>
@@ -48,23 +48,20 @@ export default Contact
 
 const ContactCard = ({ contact }) => (
     <div className='contact-card' style={styles.smallCard}>
-        <N2Logo styles={styles.logo} />
-        <div style={{borderLeft:'1px solid #EA1E25', height:'90%'}}></div>
+
+        <N2Logo className='contact-logo' />
+        <div style={{borderLeft:'1px solid #EA1E25', height:'90%'}} />
+
         <div style={{textAlign: 'center', width: 150}}>
-        <h3 style={{margin: 0}}>{contact.name}</h3>
-        <a href={`mailto:${contact.email}`}>
-            <h4 style={{margin: 0}}>{contact.email}</h4>
-        </a>
+            <h3 style={{margin: 0}}>{contact.name}</h3>
+            <a href={`mailto:${contact.email}`}>
+                <h4 style={{margin: 0}}>{contact.email}</h4>
+            </a>
         </div>
     </div>
 )
 
 const styles = {
-    logo: {
-        maxHeight: 95.3,
-        maxWidth: 123.2,
-        margin: '0px -20px'
-    },
     avatar: {
         height: '60px',
         width: '60px',

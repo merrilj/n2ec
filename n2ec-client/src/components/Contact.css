@@ -55,9 +55,7 @@
     text-decoration-color: #EA1E25;
 }
 
-/* @media screen and (max-width: 805px) {
-    .contact-cards {
-        display: flex;
-        justify-content: center;
-    }
-} */
+.contact-logo {
+    max-height: 95.3px;
+    margin: 0px -20px;
+}

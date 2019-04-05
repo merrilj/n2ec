@@ -4,7 +4,8 @@ html, body {
     height: 100vh;
     min-height: 100vh;
     background-color: #fff;
-    font-family: 'Monda', sans-serif;    
+    font-family: 'Monda', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #container {
@@ -47,4 +48,14 @@ html, body {
 
 .footer.fa-envelope:hover {
     color: #000 !important;    
+}
+
+.logo {
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    background: no-repeat center center fixed;
 }

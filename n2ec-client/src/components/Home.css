@@ -1,0 +1,33 @@
+.home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-logo {
+    margin-top: -100px;
+    width: 100%;
+    max-width: 616px;
+    height: auto;
+}
+
+.home-tagline {
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-license {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #EA1E25;
+}
+
+@media only screen and (max-width: 500px) {
+    .home-tagline {
+        margin-top: -40px;
+    }
+}
