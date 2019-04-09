@@ -6,8 +6,26 @@ import './Contact.css'
 import N2Logo from './N2Logo'
 
 const contacts = [
-    {name: 'Nathan Jeffs', email: 'nathan@n2ec.com'},
-    {name: 'Nick Holloway', email: 'nick@n2ec.com'}    
+    {
+        name: 'Nick Holloway',
+        title: 'President and Field Superintendent',
+        email: 'nick@n2ec.com'
+    },
+    {
+        name: 'Nathan Jeffs',
+        title: 'Vice President and Project Manager',
+        email: 'nathan@n2ec.com'
+    },
+    {
+        name: 'Fredrick Jeffs',
+        title: 'Job Foreman',
+        email: 'fredrick@n2ec.com'
+    },
+    {
+        name: 'Ladonna Box',
+        title: 'Office Manager',
+        email: 'ladonna@n2ec.com'
+    }
 ]
 
 const Contact = () => (
@@ -53,9 +71,10 @@ const ContactCard = ({ contact }) => (
         <div style={{borderLeft:'1px solid #EA1E25', height:'90%'}} />
 
         <div style={{textAlign: 'center', width: 150}}>
-            <h3 style={{margin: 0}}>{contact.name}</h3>
+            <h4 style={{margin: '0.3em'}}>{contact.name}</h4>
+            <h5 style={{margin: '0.3em', color: 'gray'}}>{contact.title}</h5>
             <a href={`mailto:${contact.email}`}>
-                <h4 style={{margin: 0}}>{contact.email}</h4>
+                <h5 style={{margin: '0.3em', color: 'gray'}}>{contact.email}</h5>
             </a>
         </div>
     </div>
