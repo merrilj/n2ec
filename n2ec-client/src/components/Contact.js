@@ -13,7 +13,7 @@ const contacts = [
     },
     {
         name: 'Nathan Jeffs',
-        title: 'Vice President and Project Manager',
+        title: 'Vice President and Project Manager and Estimator',
         email: 'nathan@n2ec.com'
     },
     {
@@ -65,14 +65,16 @@ const Contact = () => (
 export default Contact
 
 const ContactCard = ({ contact }) => (
-    <div className='contact-card' style={styles.smallCard}>
+    <div className='contact-card'>
 
         <N2Logo className='contact-logo' />
         <div style={{borderLeft:'1px solid #EA1E25', height:'90%'}} />
 
-        <div style={{textAlign: 'center', width: 150}}>
+        <div style={{textAlign: 'center'}}>
             <h4 style={{margin: '0.3em'}}>{contact.name}</h4>
-            <h5 style={{margin: '0.3em', color: 'gray'}}>{contact.title}</h5>
+            { contact.title.split(' and ').map((el, i) => (
+                <h5 key={i} style={{margin: '0.3em', color: 'gray'}}>{el}</h5>
+            ))}
             <a href={`mailto:${contact.email}`}>
                 <h5 style={{margin: '0.3em', color: 'gray'}}>{contact.email}</h5>
             </a>
