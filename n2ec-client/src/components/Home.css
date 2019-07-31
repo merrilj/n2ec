@@ -6,9 +6,8 @@
 }
 
 .home-logo {
+    max-width: 600px;
     margin-top: -100px;
-    width: 100%;
-    max-width: 616px;
     height: auto;
 }
 
@@ -29,5 +28,11 @@
 @media only screen and (max-width: 500px) {
     .home-tagline {
         margin-top: -40px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .home-logo {
+        width: 90%;
     }
 }

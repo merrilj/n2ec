@@ -72,7 +72,7 @@ const ContactCard = ({ contact }) => (
 
         <div style={{textAlign: 'center'}}>
             <h4 style={{margin: '0.3em'}}>{contact.name}</h4>
-            { contact.title.split(' and ').map((el, i) => (
+            {contact.title.split(' and ').map((el, i) => (
                 <h5 key={i} style={{margin: '0.3em', color: 'gray'}}>{el}</h5>
             ))}
             <a href={`mailto:${contact.email}`}>
