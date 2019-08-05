@@ -22,9 +22,9 @@ const contacts = [
         email: 'fredrick@n2ec.com'
     },
     {
-        name: 'Ladonna Box',
-        title: 'Office Manager',
-        email: 'ladonna@n2ec.com'
+        name: 'Curtis Jeffs',
+        title: 'Project Coordinator',
+        email: 'curtis@n2ec.com'
     }
 ]
 
